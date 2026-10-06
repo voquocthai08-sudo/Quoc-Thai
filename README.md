@@ -1,2 +1,0 @@
-# Quoc-Thai
-Gift
