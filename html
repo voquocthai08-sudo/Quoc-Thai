@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gửi Huỳnh Giao 💗</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: "Comic Sans MS", "Segoe UI", sans-serif;
+            background: #ffeaf3;
+            color: #6b3b50;
+            overflow: hidden;
+        }
+        .page {
+            width: 100vw;
+            height: 100vh;
+            display: none;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+            padding: 25px;
+        }
+        .page.active {
+            display: flex;
+            animation: fadeIn 0.8s ease;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* HOA / TRÁI TIM TRANG TRÍ */
+        .heart {
+            position: absolute;
+            font-size: 25px;
+            animation: float 4s infinite ease-in-out;
+            opacity: 0.7;
+        }
+        .h1 { top: 10%; left: 10%; }
+        .h2 { top: 20%; right: 12%; animation-delay: 1s; }
+        .h3 { bottom: 15%; left: 15%; animation-delay: 2s; }
+        .h4 { bottom: 20%; right: 10%; animation-delay: 1.5s; }
+        @keyframes float {
+            0%,100% {
+                transform: translateY(0) rotate(-5deg);
+            }
+            50% {
+                transform: translateY(-15px) rotate(5deg);
+            }
+        }
+        /* CARD */
+        .card {
+            width: min(90%, 650px);
+            background: rgba(255,255,255,0.9);
+            border-radius: 35px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 15px 40px rgba(218, 100, 145, 0.2);
+            border: 3px solid #ffd0e1;
+            position: relative;
+        }
+        .card h1 {
+            font-size: clamp(32px, 7vw, 55px);
+            color: #e96d9a;
+            margin-bottom: 15px;
+        }
+        .card h2 {
+            font-size: clamp(24px, 5vw, 35px);
+            color: #d95d8b;
+            margin-bottom: 20px;
+        }
+        .card p {
+            font-size: 18px;
+            line-height: 1.8;
+            margin: 12px 0;
+        }
+        /* ẢNH */
+        .photo {
+            width: 190px;
+            height: 190px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 7px solid #ffc2d9;
+            box-shadow: 0 8px 25px rgba(200,80,130,0.2);
+            margin-bottom: 20px;
+        }
+        /* NÚT */
+        button {
+            border: none;
+            background: linear-gradient(135deg, #ff91b8, #e96d9a);
+            color: white;
+            padding: 14px 28px;
+            border-radius: 50px;font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 25px;
+            box-shadow: 0 6px 15px rgba(218, 92, 139, 0.3);
+            transition: 0.25s;
+        }
+        button:hover {
+            transform: scale(1.07);
+            box-shadow: 0 8px 20px rgba(218, 92, 139, 0.4);
+        }
+        /* TRANG 2 */
+        .letter {
+            background: #fff5f9;
+            padding: 25px;
+            border-radius: 20px;
+            text-align: left;
+            line-height: 1.8;
+            margin-top: 10px;
+            border: 2px dashed #ffabc8;
+        }
+        .letter strong {
+            color: #df5c8c;
+        }
+        /* TRANG 3 */
+        .final {
+            font-size: 20px;
+            line-height: 1.9;
+        }
+        .taiwan {
+            font-size: 60px;
+            margin: 15px;
+        }
+        .signature {
+            margin-top: 25px;
+            color: #d85b89;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        /* MOBILE */
+        @media (max-width: 600px) {
+            .card {
+                padding: 30px 20px;
+            }
+            .card p {
+                font-size: 16px;
+            }
+            .photo {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- TRANG 1: MỞ ĐẦU -->
+    <section class="page active" id="page1">
+        <div class="heart h1">💗</div>
+        <div class="heart h2">🌸</div>
+        <div class="heart h3">💕</div>
+        <div class="heart h4">🎀</div>
+        <div class="card">
+            <!-- ĐỔI ẢNH Ở ĐÂY -->
+            <img src="huynh-giao.jpg" class="photo" alt="Huỳnh Giao">
+            <h1>Gửi Huỳnh Giao 💗</h1>
+            <p>
+                Có một cô gái sắp rời Việt Nam...
+            </p>
+            <p>
+                và bắt đầu một chương mới thật đặc biệt
+                ở một nơi rất xa. 🇹🇼
+            </p>
+            <button onclick="nextPage(2)">
+                Mở món quà nè 🎁
+            </button>
+        </div>
+    </section>
+    <!-- TRANG 2: THÂN -->
+    <section class="page" id="page2">
+        <div class="heart h1">🌷</div>
+        <div class="heart h2">💗</div>
+        <div class="heart h3">✨</div>
+        <div class="heart h4">🧸</div>
+        <div class="card">
+            <h2>Gửi cô gái sắp đi Đài Loan 🇹🇼</h2>
+            <div class="letter">
+                <p>
+                    Giao à,
+                </p>
+                <p>
+                    Vậy là sắp tới bả sẽ bắt đầu một hành trình
+                    hoàn toàn mới rồi đó.
+                </p>
+                <p>
+                    Từ những ngày quen thuộc ở Việt Nam,
+                    giờ đây bả sẽ có một thành phố mới,một ngôi trường mới, những người bạn mới
+                    và vô số điều chưa từng trải qua.
+                </p>
+                <p>
+                    Có thể sẽ có những ngày rất vui,
+                    cũng sẽ có những ngày nhớ nhà,
+                    mệt mỏi hoặc cảm thấy hơi cô đơn.
+                </p>
+                <p>
+                    Nhưng mà <strong>đừng quên nha:</strong>
+                    bả đã đủ giỏi để bước đến nơi đó rồi.
+                    Cứ từ từ mà khám phá,
+                    cứ thử những điều mới
+                    và sống thật trọn vẹn với khoảng thời gian
+                    đáng nhớ này.
+                </p>
+                <p>
+                    Mong rằng Đài Loan sẽ đối xử thật dịu dàng
+                    với bả. 🌷
+                </p>
+            </div>
+            <button onclick="nextPage(3)">
+                Còn một điều muốn nói... 💌
+            </button>
+        </div>
+    </section>
+    <!-- TRANG 3: KẾT -->
+    <section class="page" id="page3">
+        <div class="heart h1">💗</div>
+        <div class="heart h2">✨</div>
+        <div class="heart h3">🌸</div>
+        <div class="heart h4">💕</div>
+        <div class="card">
+            <div class="taiwan">
+                🇻🇳 ✈️ 🇹🇼
+            </div>
+            <h1>Chúc bả thật vui nhé! 💗</h1>
+            <div class="final">
+                <p>
+                    Chúc Huỳnh Giao có một hành trình
+                    thật đẹp ở Đài Loan.
+                </p>
+                <p>
+                    Học thật tốt 📚<br>
+                    Gặp thật nhiều người tốt 🫶<br>
+                    Ăn thật nhiều món ngon 🧋<br>
+                    Đi thật nhiều nơi đẹp 🌸<br>
+                    Và tạo thật nhiều kỷ niệm đáng nhớ ✨
+                </p>
+                <p>
+                    Dù sau này có ở cách nhau bao xa,
+                    những kỷ niệm đẹp vẫn sẽ luôn ở đó. 💕
+                </p>
+                <div class="signature">
+                    From someone who wishes you
+                    all the best 💗
+                </div>
+            </div>
+            <button onclick="nextPage(1)">
+                Xem lại từ đầu 🌷
+            </button>
+        </div>
+    </section>
+    <script>
+        function nextPage(pageNumber) {
+            // Ẩn tất cả trang
+            document.querySelectorAll(".page").forEach(page => {
+                page.classList.remove("active");
+            });
+            // Hiện trang được chọn
+            document.getElementById("page" + pageNumber)
+                .classList.add("active");
+        }
+    </script>
+</body>
+</html>
